@@ -1,9 +1,9 @@
 import type { Config } from "tailwindcss";
 
 /*
- * Design tokens for Shortlist (working name). Warm cream (and dark brown) surfaces, black actions, clay accent, green for
+ * Design tokens for Jobziai. White (and deep navy) surfaces, navy actions, cyan accent, green for
  * "applied" and amber for "needs you", so colour always carries meaning.
- * Matches the landing page.
+ * Matches the landing page and the logo. The token names are kept; "clay" is the cyan accent.
  */
 const config: Config = {
   content: ["./src/**/*.{ts,tsx,mdx}"],
@@ -43,7 +43,7 @@ const config: Config = {
         panel: "1rem",
       },
       boxShadow: {
-        lift: "0 18px 40px -22px rgb(94 64 34 / 0.35)",
+        lift: "0 18px 40px -22px rgb(0 32 64 / 0.28)",
         glow: "0 0 0 1px rgb(var(--glow) / 0.35), 0 14px 40px -14px rgb(var(--glow) / 0.5)",
       },
     },

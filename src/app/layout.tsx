@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Shortlist finds jobs on official career pages worldwide, scores each one against your profile, tailors your resume using only what is true, and applies for you. If information is missing, it pauses and waits for your answer.",
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/icon.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#fdfcf8",
+  themeColor: "#002040",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

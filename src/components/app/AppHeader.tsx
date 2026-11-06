@@ -23,7 +23,7 @@ export function AppHeader({ name, email, showNav = false }: { name: string; emai
   return (
     <>
       <header className="sticky top-3 z-40 px-3 sm:px-4">
-        <div className="mx-auto flex max-w-page items-center justify-between gap-3 rounded-full border border-rule bg-paper/85 py-2 pl-4 pr-2 shadow-[0_12px_34px_-16px_rgb(94_64_34/0.3)] backdrop-blur-xl sm:pl-5">
+        <div className="mx-auto flex max-w-page items-center justify-between gap-3 rounded-full border border-rule bg-paper/85 py-2 pl-4 pr-2 shadow-[0_12px_34px_-16px_rgb(0_32_64/0.25)] backdrop-blur-xl sm:pl-5">
           <Logo href={showNav ? "/dashboard" : "/"} />
 
           {showNav && (

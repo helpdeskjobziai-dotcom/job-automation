@@ -141,7 +141,7 @@ function FloatingParticles() {
       for (const d of dots) {
         d.x = (d.x + d.vx + w()) % w();
         d.y = (d.y + d.vy + h()) % h();
-        ctx.fillStyle = `rgba(185, 138, 106, ${d.a})`;
+        ctx.fillStyle = `rgba(0, 176, 208, ${d.a})`;
         ctx.beginPath();
         ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
         ctx.fill();
@@ -343,7 +343,7 @@ export function Component({
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="relative z-10 w-full max-w-md"
       >
-        <Logo className="mb-6 justify-center" />
+        <Logo size="lg" className="mb-6 flex w-full justify-center" />
 
         <div className="rounded-panel border border-rule bg-sheet/90 p-6 shadow-lift backdrop-blur-xl sm:p-8">
           <div className="mb-7 text-center">

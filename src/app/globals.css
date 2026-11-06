@@ -3,48 +3,49 @@
 @tailwind utilities;
 
 :root {
-  /* Warm cream and clay theme, shared with the landing page. Values are RGB channels. */
-  --paper: 253 252 248; /* #fdfcf8 page background */
+  /* Jobziai brand theme, shared with the landing page. Values are RGB channels.
+     primary #002040, primary-dark #001840, accent #00B0D0, background #FFFFFF. */
+  --paper: 255 255 255; /* #ffffff page background */
   --sheet: 255 255 255; /* #ffffff cards and panels */
-  --sand: 245 239 229; /* #f5efe5 soft panels */
-  --ink: 21 21 21; /* #151515 main text */
-  --muted: 104 100 92; /* #68645c secondary text */
-  --rule: 233 228 218; /* #e9e4da borders */
-  --primary: 21 21 21; /* #151515 buttons */
-  --primary-hover: 42 40 37; /* #2a2825 */
+  --sand: 232 246 250; /* #e8f6fa soft panels */
+  --ink: 0 32 64; /* #002040 main text */
+  --muted: 74 94 118; /* #4a5e76 secondary text */
+  --rule: 219 232 238; /* #dbe8ee borders */
+  --primary: 0 32 64; /* #002040 buttons */
+  --primary-hover: 0 24 64; /* #001840 */
   --primary-fg: 255 255 255; /* text on primary */
-  --clay: 185 138 106; /* #b98a6a accent */
-  --clay-ink: 140 98 68; /* #8c6244 accent text */
-  --clay-soft: 241 227 211; /* #f1e3d3 accent fill */
-  --glow: 185 138 106;
-  --sent: 45 111 81; /* #2d6f51 done, applied */
-  --sent-soft: 227 240 232; /* #e3f0e8 */
+  --clay: 0 144 173; /* #0090ad accent (large text, icons) */
+  --clay-ink: 0 106 133; /* #006a85 accent text */
+  --clay-soft: 213 241 248; /* #d5f1f8 accent fill */
+  --glow: 0 176 208; /* #00b0d0 accent */
+  --sent: 31 107 74; /* #1f6b4a done, applied */
+  --sent-soft: 225 242 234; /* #e1f2ea */
   --hold: 107 78 18; /* #6b4e12 needs attention (text) */
   --hold-soft: 251 242 221; /* #fbf2dd */
   --hold-line: 236 217 165; /* #ecd9a5 */
-  --track: 232 225 212; /* #e8e1d4 ring track */
+  --track: 219 230 238; /* #dbe6ee ring track */
   color-scheme: light;
 }
 :root[data-theme="dark"] {
-  --paper: 18 16 14; /* #12100e */
-  --sheet: 27 24 20; /* #1b1814 */
-  --sand: 26 23 19; /* #1a1713 */
-  --ink: 244 239 230; /* #f4efe6 */
-  --muted: 167 159 146; /* #a79f92 */
-  --rule: 48 44 39; /* hairline on dark */
-  --primary: 244 239 230;
-  --primary-hover: 255 255 255;
-  --primary-fg: 21 21 21;
-  --clay: 208 162 131;
-  --clay-ink: 227 184 148;
-  --clay-soft: 58 45 34;
-  --glow: 208 162 131;
+  --paper: 0 15 30; /* #000f1e */
+  --sheet: 7 31 56; /* #071f38 */
+  --sand: 4 24 44; /* #04182c */
+  --ink: 234 244 250; /* #eaf4fa */
+  --muted: 157 178 199; /* #9db2c7 */
+  --rule: 22 48 74; /* hairline on dark */
+  --primary: 0 176 208; /* #00b0d0 */
+  --primary-hover: 63 208 234;
+  --primary-fg: 0 24 64; /* #001840 */
+  --clay: 31 195 224;
+  --clay-ink: 63 208 234;
+  --clay-soft: 4 44 66;
+  --glow: 0 176 208;
   --sent: 143 224 178; /* #8fe0b2 */
-  --sent-soft: 26 46 36;
+  --sent-soft: 10 44 38;
   --hold: 243 213 138; /* #f3d58a */
   --hold-soft: 46 38 20;
   --hold-line: 92 76 40;
-  --track: 52 48 42;
+  --track: 22 57 90;
   color-scheme: dark;
 }
 
@@ -69,16 +70,20 @@
 }
 
 @layer components {
+  /* Two transparent logo files, one per theme (see components/ui/Logo.tsx). */
   .site-logo {
-    height: 2.25rem;
     width: auto;
     object-fit: contain;
-    mix-blend-mode: multiply;
     display: block;
   }
-  :root[data-theme="dark"] .site-logo {
-    mix-blend-mode: screen;
-    filter: invert(1);
+  .site-logo-dark {
+    display: none;
+  }
+  :root[data-theme="dark"] .site-logo-light {
+    display: none;
+  }
+  :root[data-theme="dark"] .site-logo-dark {
+    display: block;
   }
 
   /* Card whose border lights up around the pointer (like StudyBuddy's bento cards). */
