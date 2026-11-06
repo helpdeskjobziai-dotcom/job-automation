@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "Shortlist: AI that applies to jobs for you",
   description:
     "Shortlist finds jobs on official career pages worldwide, scores each one against your profile, tailors your resume using only what is true, and applies for you. If information is missing, it pauses and waits for your answer.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export const viewport: Viewport = {

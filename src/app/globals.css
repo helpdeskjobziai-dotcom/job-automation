@@ -69,6 +69,18 @@
 }
 
 @layer components {
+  .site-logo {
+    height: 2.25rem;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    display: block;
+  }
+  :root[data-theme="dark"] .site-logo {
+    mix-blend-mode: screen;
+    filter: invert(1);
+  }
+
   /* Card whose border lights up around the pointer (like StudyBuddy's bento cards). */
   .glow-card {
     --gx: 50%;
